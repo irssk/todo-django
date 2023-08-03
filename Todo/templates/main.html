@@ -1,0 +1,23 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TODO</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+</head>
+<body>
+    <header>
+        <div class="header-menu">
+        {% for month in months %}
+            <a href="/{{ month.id }}" class="{% if month.title == selected_month %}active{% endif %}">{{ month.title }}</a>
+        {% endfor %}
+        </div>
+    </header>
+    {% block main %}{% endblock %}
+    <footer>
+
+    </footer>
+</body>
+</html>

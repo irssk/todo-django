@@ -1,0 +1,10 @@
+{% extends 'main.html' %}
+
+{% block main %}
+    <dl>
+    {% for task in tasks %}
+        <dt>{{ task.title }}</dt>
+        <dd>{{ task.description }}</dd>
+    {% endfor %}
+    </dl>
+{% endblock %}
